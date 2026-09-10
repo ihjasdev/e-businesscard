@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0d4d83" />
+  <meta name="description" content="Welford Systems digital business cards." />
+  <title>Welford Systems | Digital Business Card</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page-shell">
+    <section class="business-card" aria-label="Digital business card">
+      <div class="accent-strip" aria-hidden="true"></div>
+      <div class="card-content">
+        <header class="identity">
+          <h1 id="profileName"></h1>
+          <p id="profileRole" class="role"></p>
+        </header>
+        <figure id="profilePhotoWrap" class="profile-photo" hidden>
+          <img id="profilePhoto" src="" alt="" />
+        </figure>
+        <div class="company-block">
+          <h2 id="profileCompany"></h2>
+          <p id="profileAddress" class="address"></p>
+          <dl id="contactList" class="contact-list"></dl>
+        </div>
+        <div class="brand" aria-label="Welford Systems">
+          <img src="assets/welford-logo.svg" alt="Welford Systems" />
+        </div>
+      </div>
+    </section>
+    <section class="actions" aria-label="Contact actions">
+      <a id="saveContact" class="primary-button" href="#" download><span aria-hidden="true">＋</span> Save Contact</a>
+      <div class="secondary-actions">
+        <a id="callButton" href="#" class="action-button">Call</a>
+        <a id="emailButton" href="#" class="action-button">Email</a>
+        <button id="shareButton" class="action-button" type="button">Share</button>
+      </div>
+    </section>
+    <section class="qr-section" aria-label="QR code">
+      <img id="profileQr" src="" alt="" />
+      <p>Scan to open this digital business card.</p>
+    </section>
+    <footer><p>Welford Systems • Digital Business Card</p></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 210" role="img" aria-labelledby="title">
+  <title id="title">Welford Systems</title>
+  <defs>
+    <style>
+      .b{fill:none;stroke:#0d4d83;stroke-width:11;stroke-linecap:round;stroke-linejoin:round}
+      .t{fill:#0d4d83;font-family:Arial,Helvetica,sans-serif;font-weight:700;letter-spacing:8px}
+    </style>
+  </defs>
+  <circle class="b" cx="105" cy="105" r="76"/>
+  <path class="b" d="M55 80 L78 131 L105 93 L132 131 L155 80"/>
+  <text class="t" x="215" y="92" font-size="58">WELFORD</text>
+  <text class="t" x="215" y="165" font-size="58">SYSTEMS</text>
+</svg>

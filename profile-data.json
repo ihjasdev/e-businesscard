@@ -1,0 +1,30 @@
+{
+  "profiles": [
+    {
+      "id": "sabrin-naleer",
+      "name": "Sabrin Naleer",
+      "title": "Head of Governance, Risk & Compliance",
+      "company": "Welford Systems (Pvt) Ltd.",
+      "phones": ["+94775588124", "+94753212303"],
+      "email": "sabrin.naleer@welfordsystems.com",
+      "website": "https://www.welfordsystems.com",
+      "address": "123 Bauddhaloka Mawatha, 2/F McLaren’s Bldg, Colombo 04, Sri Lanka.",
+      "profileUrl": "https://card.welfordsystems.com/sabrin",
+      "qrCode": "assets/qr-sabrin.png",
+      "photo": "assets/sabrin-naleer.png"
+    },
+    {
+      "id": "ihjas-abdullah",
+      "name": "Ihjas Abdullah",
+      "title": "Integration Lead",
+      "company": "Welford Systems (Pvt) Ltd.",
+      "phones": ["+94766313173", "+94758913173"],
+      "email": "ihjas.abdullah@welfordsystems.com",
+      "website": "https://www.welfordsystems.com",
+      "address": "123 Bauddhaloka Mawatha, 2/F McLaren’s Bldg, Colombo 04, Sri Lanka.",
+      "profileUrl": "https://card.welfordsystems.com/ihjas",
+      "qrCode": "assets/qr-ihjas.png",
+      "photo": "assets/ihjas-abdullah.png"
+    }
+  ]
+}

@@ -1,0 +1,375 @@
+:root {
+  --welford-blue: #0d4d83;
+  --welford-cyan: #25a5d8;
+  --text: #20252c;
+  --muted: #5e6670;
+  --card-bg: #ffffff;
+  --page-bg: #eef3f7;
+  --border: #d8e1e8;
+  --shadow: 0 18px 45px rgba(13, 77, 131, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Helvetica, Arial, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top, rgba(37,165,216,.11), transparent 33rem),
+    var(--page-bg);
+}
+
+a {
+  color: inherit;
+}
+
+.page-shell {
+  width: min(980px, calc(100% - 28px));
+  margin: 0 auto;
+  padding: 42px 0 32px;
+}
+
+.business-card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.75 / 1;
+  max-height: 560px;
+  min-height: 390px;
+  background: var(--card-bg);
+  border: 1px solid rgba(13, 77, 131, 0.08);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.accent-strip {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 5.8%;
+  background: linear-gradient(180deg, #26a6d8 0%, #4dbadd 100%);
+}
+
+.card-content {
+  position: relative;
+  height: 100%;
+  padding: clamp(34px, 5vw, 72px) clamp(36px, 6vw, 80px) clamp(32px, 5vw, 64px)
+    clamp(58px, 9vw, 118px);
+}
+
+.identity h1 {
+  margin: 0;
+  color: var(--welford-blue);
+  font-size: clamp(38px, 6vw, 78px);
+  line-height: .96;
+  letter-spacing: -0.045em;
+  font-weight: 730;
+}
+
+.identity {
+  max-width: 72%;
+}
+
+.profile-photo {
+  position: absolute;
+  z-index: 1;
+  top: clamp(28px, 4.2vw, 58px);
+  right: clamp(30px, 4.5vw, 62px);
+  width: clamp(108px, 17vw, 178px);
+  aspect-ratio: 1;
+  margin: 0;
+  overflow: hidden;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  background: #e8eff4;
+  box-shadow: 0 9px 25px rgba(13, 77, 131, .22);
+}
+
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: 50% 27%;
+}
+
+.role {
+  margin: 14px 0 0;
+  font-size: clamp(18px, 2.75vw, 38px);
+  line-height: 1.2;
+  font-weight: 350;
+  color: #292d31;
+}
+
+.company-block {
+  position: absolute;
+  left: clamp(58px, 9vw, 118px);
+  bottom: clamp(36px, 6vw, 76px);
+  max-width: 66%;
+}
+
+.company-block h2 {
+  margin: 0 0 18px;
+  color: var(--welford-blue);
+  font-size: clamp(18px, 2.5vw, 33px);
+  letter-spacing: -0.02em;
+}
+
+.address {
+  margin: 0 0 14px;
+  color: #33383e;
+  font-size: clamp(14px, 1.75vw, 23px);
+  line-height: 1.35;
+}
+
+.contact-list {
+  margin: 0;
+  font-size: clamp(13px, 1.55vw, 21px);
+  line-height: 1.45;
+}
+
+.contact-list > div {
+  display: grid;
+  grid-template-columns: minmax(76px, 0.25fr) 1fr;
+  gap: 4px 16px;
+  align-items: baseline;
+}
+
+.contact-list dt {
+  color: #646b72;
+}
+
+.contact-list dd {
+  margin: 0;
+  min-width: 0;
+}
+
+.contact-list a {
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.contact-list a:hover {
+  color: var(--welford-blue);
+  text-decoration: underline;
+}
+
+.separator {
+  margin: 0 6px;
+}
+
+.brand {
+  position: absolute;
+  right: clamp(34px, 5vw, 70px);
+  bottom: clamp(42px, 7vw, 90px);
+  width: clamp(155px, 25%, 255px);
+}
+
+.brand img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.actions {
+  margin: 26px auto 0;
+  width: min(620px, 100%);
+}
+
+.primary-button,
+.action-button {
+  border-radius: 14px;
+  min-height: 52px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: .01em;
+  cursor: pointer;
+  font: inherit;
+}
+
+.primary-button {
+  width: 100%;
+  gap: 8px;
+  padding: 15px 22px;
+  background: var(--welford-blue);
+  color: #fff;
+  box-shadow: 0 9px 22px rgba(13, 77, 131, .18);
+}
+
+.primary-button:hover {
+  filter: brightness(1.06);
+}
+
+.secondary-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.action-button {
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.9);
+  color: var(--welford-blue);
+}
+
+button.action-button {
+  appearance: none;
+}
+
+.action-button:hover {
+  border-color: rgba(13,77,131,.45);
+  background: #fff;
+}
+
+.qr-section {
+  width: min(330px, 100%);
+  margin: 34px auto 0;
+  padding: 20px;
+  text-align: center;
+  background: rgba(255,255,255,.72);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+}
+
+.qr-section img {
+  display: block;
+  width: 190px;
+  max-width: 75%;
+  margin: 0 auto 10px;
+  border-radius: 8px;
+}
+
+.qr-section p,
+footer p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 22px;
+}
+
+@media (max-width: 720px) {
+  .page-shell {
+    width: min(100% - 18px, 620px);
+    padding-top: 18px;
+  }
+
+  .business-card {
+    aspect-ratio: auto;
+    min-height: 500px;
+    border-radius: 16px;
+  }
+
+  .accent-strip {
+    width: 14px;
+  }
+
+  .card-content {
+    padding: 34px 24px 34px 38px;
+  }
+
+  .identity h1 {
+    font-size: clamp(38px, 11vw, 55px);
+  }
+
+  .identity {
+    max-width: calc(100% - 112px);
+  }
+
+  .profile-photo {
+    top: 26px;
+    right: 20px;
+    width: 100px;
+    border-width: 4px;
+  }
+
+  .role {
+    font-size: clamp(18px, 5vw, 26px);
+    max-width: 95%;
+  }
+
+  .company-block {
+    position: static;
+    margin-top: 96px;
+    max-width: 100%;
+  }
+
+  .company-block h2 {
+    font-size: 22px;
+  }
+
+  .address {
+    font-size: 16px;
+  }
+
+  .contact-list {
+    font-size: 15px;
+  }
+
+  .contact-list > div {
+    grid-template-columns: 70px 1fr;
+  }
+
+  .brand {
+    top: 165px;
+    right: 24px;
+    bottom: auto;
+    width: 150px;
+  }
+
+  .secondary-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 430px) {
+  .business-card {
+    min-height: 545px;
+  }
+
+  .brand {
+    top: 182px;
+    width: 132px;
+  }
+
+  .company-block {
+    margin-top: 110px;
+  }
+
+  .contact-list > div {
+    display: block;
+    margin-top: 9px;
+  }
+
+  .contact-list dt {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+  }
+
+  .contact-list dd {
+    margin-top: 1px;
+  }
+
+  .separator {
+    display: block;
+    height: 2px;
+    overflow: hidden;
+    visibility: hidden;
+  }
+}

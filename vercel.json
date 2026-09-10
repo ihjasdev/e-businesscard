@@ -1,0 +1,14 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/sabrin",
+      "destination": "/index.html?profile=sabrin-naleer"
+    },
+    {
+      "source": "/ihjas",
+      "destination": "/index.html?profile=ihjas-abdullah"
+    }
+  ]
+}
