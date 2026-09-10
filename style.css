@@ -265,13 +265,13 @@ footer {
 
 @media (max-width: 720px) {
   .page-shell {
-    width: min(100% - 18px, 620px);
-    padding-top: 18px;
+    width: min(100% - 24px, 620px);
+    padding: 14px 0 28px;
   }
 
   .business-card {
     aspect-ratio: auto;
-    min-height: 500px;
+    min-height: 0;
     border-radius: 16px;
   }
 
@@ -280,45 +280,63 @@ footer {
   }
 
   .card-content {
-    padding: 34px 24px 34px 38px;
-  }
-
-  .identity h1 {
-    font-size: clamp(38px, 11vw, 55px);
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 32px 24px 34px 38px;
   }
 
   .identity {
-    max-width: calc(100% - 112px);
+    order: 2;
+    max-width: 100%;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .identity h1 {
+    font-size: clamp(36px, 10vw, 52px);
+    line-height: 1;
   }
 
   .profile-photo {
-    top: 26px;
-    right: 20px;
-    width: 100px;
+    position: relative;
+    top: auto;
+    right: auto;
+    order: 1;
+    align-self: center;
+    width: clamp(124px, 38vw, 164px);
     border-width: 4px;
   }
 
   .role {
-    font-size: clamp(18px, 5vw, 26px);
-    max-width: 95%;
+    max-width: 440px;
+    margin: 10px auto 0;
+    font-size: clamp(18px, 5vw, 24px);
+    line-height: 1.3;
   }
 
   .company-block {
     position: static;
-    margin-top: 96px;
+    order: 4;
+    margin-top: 30px;
     max-width: 100%;
+    text-align: left;
   }
 
   .company-block h2 {
-    font-size: 22px;
+    margin-bottom: 14px;
+    font-size: clamp(20px, 5.7vw, 25px);
   }
 
   .address {
     font-size: 16px;
+    line-height: 1.45;
   }
 
   .contact-list {
-    font-size: 15px;
+    font-size: 16px;
+    line-height: 1.5;
   }
 
   .contact-list > div {
@@ -326,10 +344,15 @@ footer {
   }
 
   .brand {
-    top: 165px;
-    right: 24px;
-    bottom: auto;
+    position: static;
+    order: 3;
+    align-self: center;
     width: 150px;
+    margin-top: 24px;
+  }
+
+  .actions {
+    margin-top: 16px;
   }
 
   .secondary-actions {
@@ -338,22 +361,13 @@ footer {
 }
 
 @media (max-width: 430px) {
-  .business-card {
-    min-height: 545px;
-  }
-
-  .brand {
-    top: 182px;
-    width: 132px;
-  }
-
-  .company-block {
-    margin-top: 110px;
+  .card-content {
+    padding: 28px 20px 30px 32px;
   }
 
   .contact-list > div {
     display: block;
-    margin-top: 9px;
+    margin-top: 14px;
   }
 
   .contact-list dt {
@@ -368,8 +382,7 @@ footer {
 
   .separator {
     display: block;
-    height: 2px;
-    overflow: hidden;
-    visibility: hidden;
+    height: 3px;
+    color: transparent;
   }
 }
