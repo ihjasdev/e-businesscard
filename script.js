@@ -4,7 +4,8 @@ const elements = {
   contacts: document.getElementById("contactList"), photoWrap: document.getElementById("profilePhotoWrap"),
   photo: document.getElementById("profilePhoto"), save: document.getElementById("saveContact"),
   call: document.getElementById("callButton"), email: document.getElementById("emailButton"),
-  share: document.getElementById("shareButton"), qr: document.getElementById("profileQr")
+  share: document.getElementById("shareButton"), qr: document.getElementById("profileQr"),
+  mobileQr: document.getElementById("mobileProfileQr")
 };
 let activeProfile;
 let vcardUrl;
@@ -79,6 +80,8 @@ function renderProfile(profile) {
   }
   elements.qr.src = profile.qrCode;
   elements.qr.alt = `QR code for ${profile.name}'s digital business card`;
+  elements.mobileQr.src = profile.qrCode;
+  elements.mobileQr.alt = `QR code for ${profile.name}'s digital business card`;
   elements.call.hidden = !profile.phones?.length;
   elements.call.href = profile.phones?.length ? `tel:${profile.phones[0]}` : "#";
   elements.email.hidden = !profile.email;
