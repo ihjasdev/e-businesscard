@@ -11,7 +11,7 @@ A static, mobile-friendly collection of digital business cards for the Welford S
 - Website link
 - Native Share button where supported
 - `Save Contact` button using a standard `.vcf` vCard
-- QR code linking to `https://card.welfordsystems.com/sabrin`
+- QR codes linking to the profiles at `https://profile.isitsolution.com`
 - Independent profile pages and QR codes for Sabrin Naleer and Ihjas Abdullah
 - Optional circular profile photo at the top-right of the card
 - Contact details and generated vCards driven by `profile-data.json`
@@ -52,7 +52,7 @@ http://localhost:8080
 2. Create a new project and upload/import this folder.
 3. Deploy it.
 4. In Vercel, add your custom domain:
-   `card.welfordsystems.com`
+   `profile.isitsolution.com`
 5. Vercel will show the exact DNS record you must create.
 
 ## Connect the Spaceship domain
@@ -70,7 +70,7 @@ In Spaceship:
 This package is configured so the public card URL can be:
 
 ```text
-https://card.welfordsystems.com/sabrin
+https://profile.isitsolution.com/sabrin
 ```
 
 The included `vercel.json` rewrites `/sabrin` to the card page.
