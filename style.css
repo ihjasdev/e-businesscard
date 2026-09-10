@@ -726,6 +726,10 @@ footer {
 
 /* Final mobile layout: logo, identity row, contact stack, QR, action footer. */
 @media (max-width: 720px) {
+  .business-card {
+    max-height: none;
+  }
+
   .card-content {
     display: grid;
     grid-template-columns: 112px minmax(0, 1fr);
@@ -739,7 +743,7 @@ footer {
     grid-row: 1;
     justify-self: start;
     align-self: start;
-    width: 145px;
+    width: clamp(180px, 52vw, 225px);
     margin: 0 0 24px;
   }
 
@@ -854,7 +858,7 @@ footer {
   }
 
   .brand {
-    width: 130px;
+    width: min(185px, 56vw);
     margin-bottom: 20px;
   }
 
