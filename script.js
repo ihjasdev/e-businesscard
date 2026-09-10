@@ -17,6 +17,8 @@ const formatPhone = (phone) => {
 
 const contactRow = (label, content) => {
   const row = document.createElement("div");
+  row.className = "contact-item";
+  row.dataset.type = label.toLowerCase();
   const term = document.createElement("dt");
   const detail = document.createElement("dd");
   term.textContent = label;

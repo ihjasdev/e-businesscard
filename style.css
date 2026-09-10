@@ -9,6 +9,101 @@
   --shadow: 0 18px 45px rgba(13, 77, 131, 0.12);
 }
 
+/* Mobile visual theme. Kept after the base breakpoints so desktop is unchanged. */
+@media (max-width: 720px) {
+  body {
+    background: radial-gradient(circle at 50% -8rem, rgba(40,125,255,.2), transparent 24rem),
+      linear-gradient(180deg, #f8fbff, #eef4ff);
+  }
+
+  .page-shell { width: min(100% - 24px, 480px); padding: 18px 0 30px; }
+  .business-card {
+    min-height: 0;
+    border: 1px solid rgba(31,111,235,.09);
+    border-radius: 26px;
+    background: rgba(255,255,255,.92);
+    box-shadow: 0 22px 55px rgba(25,79,160,.13);
+  }
+  .accent-strip { display: none; }
+  .card-content { padding: 30px 22px 26px; }
+
+  .profile-photo {
+    width: clamp(122px, 36vw, 156px);
+    border: 6px solid #fff;
+    box-shadow: 0 0 0 2px rgba(31,111,235,.1), 0 14px 30px rgba(30,94,190,.2);
+  }
+  .identity h1 { font-size: clamp(32px, 9vw, 44px); line-height: 1.05; }
+  .role { color: #64738b; font-size: clamp(17px, 4.7vw, 22px); }
+  .brand { width: 142px; margin-top: 22px; }
+  .company-block { margin-top: 28px; }
+  .company-block h2 { color: #123f83; font-size: clamp(20px, 5.7vw, 24px); }
+
+  .address,
+  .contact-item {
+    position: relative;
+    min-height: 54px;
+    padding: 13px 13px 13px 49px;
+    border: 1px solid rgba(31,111,235,.09);
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0 7px 20px rgba(30,85,165,.07);
+  }
+  .address { margin-bottom: 10px; color: #334158; font-size: 15px; }
+  .contact-list { font-size: 15px; line-height: 1.45; }
+  .contact-list > .contact-item { display: block; margin-top: 10px; }
+  .contact-list dt {
+    margin-bottom: 2px;
+    color: #8290a5;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+  .contact-list dd { margin: 0; color: #263650; }
+
+  .address::before,
+  .contact-item::before {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    display: grid;
+    width: 24px;
+    height: 24px;
+    place-items: center;
+    color: #1670f8;
+    font-size: 18px;
+    transform: translateY(-50%);
+  }
+  .address::before { content: "●"; font-size: 12px; }
+  .contact-item[data-type="mobile"]::before { content: "☎"; }
+  .contact-item[data-type="email"]::before { content: "✉"; }
+  .contact-item[data-type="web"]::before { content: "●"; font-size: 12px; }
+
+  .actions { margin-top: 14px; }
+  .primary-button, .action-button { min-height: 54px; border-radius: 15px; }
+  .primary-button {
+    background: linear-gradient(135deg, #1477ff, #0757d9);
+    box-shadow: 0 10px 24px rgba(13,103,235,.25);
+  }
+  .secondary-actions { gap: 10px; margin-top: 10px; }
+  .action-button {
+    border-color: rgba(31,111,235,.1);
+    background: rgba(255,255,255,.94);
+    box-shadow: 0 6px 18px rgba(30,85,165,.07);
+  }
+  .qr-section {
+    margin-top: 18px;
+    border-color: rgba(31,111,235,.1);
+    border-radius: 22px;
+    background: rgba(255,255,255,.92);
+    box-shadow: 0 10px 28px rgba(30,85,165,.08);
+  }
+}
+
+@media (max-width: 430px) {
+  .card-content { padding: 26px 17px 22px; }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -385,4 +480,92 @@ footer {
     height: 3px;
     color: transparent;
   }
+}
+
+/* Final mobile-only theme overrides; desktop declarations above remain intact. */
+@media (max-width: 720px) {
+  body {
+    background: radial-gradient(circle at 50% -8rem, rgba(40,125,255,.2), transparent 24rem),
+      linear-gradient(180deg, #f8fbff, #eef4ff);
+  }
+  .page-shell { width: min(100% - 24px, 480px); padding: 18px 0 30px; }
+  .business-card {
+    min-height: 0;
+    border: 1px solid rgba(31,111,235,.09);
+    border-radius: 26px;
+    background: rgba(255,255,255,.92);
+    box-shadow: 0 22px 55px rgba(25,79,160,.13);
+  }
+  .accent-strip { display: none; }
+  .card-content { padding: 30px 22px 26px; }
+  .profile-photo {
+    width: clamp(122px, 36vw, 156px);
+    border: 6px solid #fff;
+    box-shadow: 0 0 0 2px rgba(31,111,235,.1), 0 14px 30px rgba(30,94,190,.2);
+  }
+  .identity h1 { font-size: clamp(32px, 9vw, 44px); line-height: 1.05; }
+  .role { color: #64738b; font-size: clamp(17px, 4.7vw, 22px); }
+  .brand { width: 142px; margin-top: 22px; }
+  .company-block { margin-top: 28px; }
+  .company-block h2 { color: #123f83; font-size: clamp(20px, 5.7vw, 24px); }
+  .address, .contact-item {
+    position: relative;
+    min-height: 54px;
+    padding: 13px 13px 13px 49px;
+    border: 1px solid rgba(31,111,235,.09);
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0 7px 20px rgba(30,85,165,.07);
+  }
+  .address { margin-bottom: 10px; color: #334158; font-size: 15px; }
+  .contact-list { font-size: 15px; line-height: 1.45; }
+  .contact-list > .contact-item { display: block; margin-top: 10px; }
+  .contact-list dt {
+    margin-bottom: 2px;
+    color: #8290a5;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+  .contact-list dd { margin: 0; color: #263650; }
+  .address::before, .contact-item::before {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    display: grid;
+    width: 24px;
+    height: 24px;
+    place-items: center;
+    color: #1670f8;
+    font-size: 18px;
+    transform: translateY(-50%);
+  }
+  .address::before { content: "●"; font-size: 12px; }
+  .contact-item[data-type="mobile"]::before { content: "☎"; }
+  .contact-item[data-type="email"]::before { content: "✉"; }
+  .contact-item[data-type="web"]::before { content: "●"; font-size: 12px; }
+  .actions { margin-top: 14px; }
+  .primary-button, .action-button { min-height: 54px; border-radius: 15px; }
+  .primary-button {
+    background: linear-gradient(135deg, #1477ff, #0757d9);
+    box-shadow: 0 10px 24px rgba(13,103,235,.25);
+  }
+  .secondary-actions { gap: 10px; margin-top: 10px; }
+  .action-button {
+    border-color: rgba(31,111,235,.1);
+    background: rgba(255,255,255,.94);
+    box-shadow: 0 6px 18px rgba(30,85,165,.07);
+  }
+  .qr-section {
+    margin-top: 18px;
+    border-color: rgba(31,111,235,.1);
+    border-radius: 22px;
+    background: rgba(255,255,255,.92);
+    box-shadow: 0 10px 28px rgba(30,85,165,.08);
+  }
+}
+
+@media (max-width: 430px) {
+  .card-content { padding: 26px 17px 22px; }
 }
