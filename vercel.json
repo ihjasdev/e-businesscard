@@ -4,11 +4,11 @@
   "rewrites": [
     {
       "source": "/sabrin",
-      "destination": "/index.html?profile=sabrin-naleer"
+      "destination": "/"
     },
     {
       "source": "/ihjas",
-      "destination": "/index.html?profile=ihjas-abdullah"
+      "destination": "/"
     }
   ]
 }
